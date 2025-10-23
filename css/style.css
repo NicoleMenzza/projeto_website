@@ -2,3 +2,14 @@
     background-color: rgb(0, 0, 0);
     color: rgb(255, 239, 168);
 }
+.card-body .linha a {
+            color: #ffffff !important;
+            text-decoration: underline;
+            **text-decoration-color: #ffc107; /* Cor amarela para a linha */**
+            text-underline-offset: 4px;
+        }
+
+        .card-body .linha a:hover {
+            color: #ce0000 !important;
+            text-decoration-color: #ffc107; /* Mantém a cor amarela no hover */
+        }

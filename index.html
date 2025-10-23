@@ -2,75 +2,83 @@
 <html lang="pt-BR" data-bs-theme="dark">
 
 <head>
+       
     <meta charset="UTF-8">
+       
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fórmula 1</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
-        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLMDJzL2sEHE3O8b6cE5F6WJ30e2mD5/PjA/0H5X+iF5+p3+e8X1E+R5+q7O0E+5A=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <style>
+        <title>Fórmula 1</title>
+       
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"        
+        xintegrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+       
+        <style>
         /* CSS Personalizado */
         body {
-            /* Fundo com Imagem */
+            /* Fundo com Imagem - Substitua 'images/F1fundo.jfif' por uma URL de imagem acessível ou local se você a tiver */
             background-image: url('images/F1fundo.jfif');
             background-repeat: no-repeat;
             background-size: cover;
-            background-attachment: fixed; /* Mantém a imagem fixa ao rolar */
+            background-attachment: fixed;
+            /* Mantém a imagem fixa ao rolar */
             background-color: #2b282a;
-            color: #ac0000; /* Cor do texto padrão */
-            font-family: Arial, sans-serif; /* Fonte padrão do site */
+            color: #ffffff;
+            /* Cor do texto padrão */
+            font-family: Arial, sans-serif;
+            /* Fonte padrão do site */
         }
 
         .navbar {
-            background-color: rgba(34, 32, 32, 0.9); /* Fundo da Navbar semi-transparente */
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+            background-color: #000000;
+            box-shadow: 0 4px 6px rgba(2, 15, 10, 0.3);
         }
 
         .nav-link {
-            color: #f1aeee !important;
+            color: #ffffff !important;
             transition: all 0.3s ease;
             border-radius: 5px;
         }
 
         .nav-link:hover {
-            background-color: #c568b6;
-            color: black !important;
-            box-shadow: 0 0 10px lightpink;
+            background-color: hsl(0, 99%, 41%);
+            color: rgb(255, 255, 255) !important;
+            box-shadow: 0 0 10px rgb(151, 0, 0);
         }
 
         .hero-banner {
             padding: 100px 0;
-            background-color: rgba(0, 0, 0, 0.5); /* Semi-transparente sobre a imagem de fundo */
+            background-color: rgba(31, 31, 31, 0.9);
             color: white;
             text-align: center;
         }
 
         .section-title {
-            color: #f5a2d5;
-            border-bottom: 2px solid #c568b6;
+            color: #ffffff;
+            border-bottom: 2px solid #ce0000;
             padding-bottom: 10px;
             margin-bottom: 30px;
         }
 
         .content-section {
             padding: 60px 0;
-            background-color: rgba(31, 31, 31, 0.9); /* Fundo escuro semi-transparente para as seções */
+            background-color: rgba(31, 31, 31, 0.9);
             border-radius: 10px;
             margin-top: 20px;
             margin-bottom: 20px;
         }
 
-        /* Estilo para as Cards de Membros e Álbuns */
         .card {
-            background-color: #333;
+            background-color: #2c2b2b;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
-            border: 1px solid #c568b6;
+            border: 1px solid #222121;
+            transition: transform 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
         }
 
         .card h5 {
-            color: #f5a2d5;
+            color: #ce0000;
         }
 
         .card img {
@@ -80,183 +88,233 @@
         }
 
         .footer {
-            background-color: rgba(34, 32, 32, 0.9);
-            color: #f1aeee;
+            background-color: #303030e6;
+            color: #ce0000;
         }
+
+        #galeria .carousel {
+            margin: 0 auto;
+            max-width: 900px;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+        }
+        
+.card-body .linha a {
+    color: #ffffff !important;
+    text-decoration: underline;
+    text-decoration-color: #303030e6; /* Cor da linha definida aqui (azul) */
+    text-underline-offset: 4px;
+}
+
+.card-body .linha a:hover {
+    background-color: transparent !important; /* Garante que não haja fundo */
+    color: #ce0000 !important;
+    text-decoration-color: #ce0000; /* Linha muda para vermelho no hover */
+}
+
+/* ... o resto do seu CSS ... */
+</
     </style>
+
 </head>
 
 <body>
 
-    <nav class="navbar navbar-expand-lg fixed-top">
-        <div class="container-fluid">
-            <a class="navbar-brand text-danger fw-bold" href="#home">Fórmula 1</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="#home">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#informacoes">Informações</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#galeria">Galeria</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#midia-mapa">Mídia</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#contato-footer">Contato / Rodapé</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
+        <nav class="navbar navbar-expand-lg fixed-top">
+                <div class="container-fluid">
+                        <a class="navbar-brand text-danger fw-bold" href="#home"> <img src="images/f1logo.avif"        
+                                class="card-img-top mx-auto mt-3" alt="Logo F1" style="max-width: 100px;"></a>
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarNav"                 aria-controls="navbarNav" aria-expanded="false"
+                aria-label="Toggle navigation">
+                                <span class="navbar-toggler-icon"></span>
+                            </button>
+                        <div class="collapse navbar-collapse" id="navbarNav">
+                                <ul class="navbar-nav ms-auto">
+                                        <li class="nav-item">
+                                                <a class="nav-link" href="#home">HOME</a>
+                                            </li>
+                                        <li class="nav-item">
+                                                <a class="nav-link" href="#galeria">PISTAS</a>
+                                            </li>
+                                        <li class="nav-item">
+                                                <a class="nav-link" href="informacoes.html">CURIOSIDADES</a>
+                                            </li>
+                                        <li class="nav-item">
+                                                <a class="nav-link" href="#pilotos">PILOTOS</a>
+                                            </li>
+                                        <li class="nav-item">
+                                                <a class="nav-link" href="#video">VÍDEO</a>
+                                            </li>
+                                        <li class="nav-item">
+                                                <a class="nav-link" href="#contato-footer">CONTATO</a>
+                                            </li>
+                                    </ul>
+                            </div>
+                    </div>
+            </nav>
 
-    <div class="container mt-5 pt-5">
-        <section id="home" class="hero-banner content-section">
-            <h1 class="display-3 fw-bold">Fórmula 1</h1>
-            <p class="lead">Fórmula 1 é a categoria mais avançada do esporte a motor e é regulamentada pela Federação Internacional de Automobilismo.</p>
-            <div class="mt-4">
-                <a href="#informacoes" class="btn btn-lg btn-danger">Saiba Mais</a>
-            </div>
-        </section>
 
-        <section id="informacoes" class="content-section p-4">
-            <h2 class="section-title text-center mb-5">Informações
-            </h2>
-            <div class="row">
-                <div class="col-lg-6 mb-4">
-                    <h3 class="text-center text-light"></h3>
-                    <div class="row g-4">
-                        <div class="col-md-4">
-                            <div class="card text-center h-100">
-                                <img src="images/lewis.jfif" class="card-img-top mx-auto mt-3" alt="Beyoncé" style="max-width: 150px;">
-                                <div class="card-body">
-                                    <h5 class="card-title">Lewis Hamilton</h5>
-                                    <p class="card-text text-secondary"> Do Reino Unido tem 7 títulos, detentor do recorde de maior número de vitórias (mais de 100) e pole positions.</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-4">
-                            <div class="card text-center h-100">
-                                <img src="images/Piastri.jfif" class="card-img-top mx-auto mt-3" alt="Michelle Williams" style="max-width: 150px;">
-                                <div class="card-body">
-                                    <h5 class="card-title">Oscar Piastri</h5>
-                                    <p class="card-text text-secondary">Liderança surpreendente e consistente na temporada, com 8 vitórias.</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-4">
-                            <div class="card text-center h-100">
-                                <img src="images/Norris.jfif" class="card-img-top mx-auto mt-3" alt="Kelly Rowland" style="max-width: 150px;">
-                                <div class="card-body">
-                                    <h5 class="card-title">Lando Norris</h5>
-                                    <p class="card-text text-secondary">Companheiro de equipe de Piastri, forte candidato ao título e um dos mais rápidos em ritmo puro.</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-4">
-                            <div class="card text-center h-100">
-                                <img src="images/max.jfif" class="card-img-top mx-auto mt-3" alt="Beyoncé" style="max-width: 150px;">
-                                <div class="card-body">
-                                    <h5 class="card-title">Max Verstappen</h5>
-                                    <p class="card-text text-secondary">Tricampeão mundial, ainda é uma força dominante, mesmo com o carro da McLaren à frente.</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-4">
-                            <div class="card text-center h-100">
-                                <img src="images/George.jfif" class="card-img-top mx-auto mt-3" alt="Beyoncé" style="max-width: 150px;">
-                                <div class="card-body">
-                                    <h5 class="card-title">George Russel</h5>
-                                    <p class="card-text text-secondary">Piloto mais bem colocado da Mercedes, mostrando resiliência e velocidade.</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-4">
-                            <div class="card text-center h-100">
-                                <img src="images/charles leclerc.jfif" class="card-img-top mx-auto mt-3" alt="Beyoncé" style="max-width: 150px;">
-                                <div class="card-body">
-                                    <h5 class="card-title">Charles Leclerc</h5>
-                                    <p class="card-text text-secondary">Líder da Ferrari, conhecido por sua velocidade em classificação e talento natural.</p>
-                                </div>
-                            </div>
-                        </div>
-                     
-                    </div>
-                </div>
+        <div class="container mt-5 pt-5">
+                <section id="home" class="hero-banner content-section">
+                        <h1 class="display-3 fw-bold">Fórmula 1</h1>
+                        <p class="lead">Fórmula 1 é a categoria mais avançada do esporte a motor e é regulamentada pela Federação Internacional de Automobilismo.</p>
+                        <div class="mt-4">
+                                <a href="informacoes.html" class="btn btn-lg btn-danger">Mais Informações</a>
+                            </div>
+                    </section>
 
-                
-            </div>
-        </section>
+                <section id="galeria" class="content-section p-4 text-center">
+                        <h2 class="section-title mb-5">PISTAS</h2>
 
-        <section id="galeria" class="content-section p-4 text-center">
-            <h2 class="section-title mb-5">Galeria de Fotos</h2>
-            <div class="row">
-                <div class="col-md-4 mb-3">
-                    <img src="images/galeria-1.jpg" class="img-fluid rounded shadow" alt="Destiny's Child Galeria 1">
-                </div>
-                <div class="col-md-4 mb-3">
-                    <img src="images/galeria-2.jpg" class="img-fluid rounded shadow" alt="Destiny's Child Galeria 2">
-                </div>
-                <div class="col-md-4 mb-3">
-                    <img src="images/galeria-3.jpg" class="img-fluid rounded shadow" alt="Destiny's Child Galeria 3">
-                </div>
-            </div>
-        </section>
+                        <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+                                <div class="carousel-inner">
+                                        <div class="carousel-item active">
+                                                <img src="images/inter.jpeg" class="d-block w-100"
+                            alt="Autódromo de Interlagos">
+                                            </div>
+                                        <div class="carousel-item">
+                                                <img src="images/Monaco.jpeg" class="d-block w-100"
+                            alt="Circuito de Mônaco">
+                                            </div>
+                                        <div class="carousel-item">
+                                                <img src="images/MONZA.jpeg" class="d-block w-100"
+                            alt="Autódromo de Monza">
+                                            </div>
+                                        <div class="carousel-item">
+                                                <img src="images/sil.jpeg" class="d-block w-100"
+                            alt="Circuito de Silverstone">
+                                            </div>
+                                    </div>
+                                <button class="carousel-control-prev" type="button"
+                    data-bs-target="#carouselExampleAutoplaying"                     data-bs-slide="prev">
+                                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                        <span class="visually-hidden">Previous</span>
+                                    </button>
+                                <button class="carousel-control-next" type="button"
+                    data-bs-target="#carouselExampleAutoplaying"                     data-bs-slide="next">
+                                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                        <span class="visually-hidden">Next</span>
+                                    </button>
+                            </div>
+                    </section>
 
-        <section id="midia-mapa" class="content-section p-4 text-center">
-            <h2 class="section-title mb-5">Mídia e Localização</h2>
-            <div class="row">
-                <div class="col-lg-6 mb-4">
-                    <h3 class="text-light">Clipe em Destaque</h3>
-                    <div class="ratio ratio-16x9">
-                        <iframe src="https://www.youtube.com/embed/GzAcvaKHG2Y?si=sP1hz-r-3OoHqIo1"
-                            title="YouTube video player - Say My Name" frameborder="0"
+                <section id="pilotos" class="content-section p-4 text-center">
+                        <h2 class="section-title text-center mb-5">PILOTOS
+                            </h2>
+                        <div class="row">
+                                <div class="mb-4">
+                                        <h3 class="text-center text-light"></h3>
+                                        <div class="row g-4 justify-content-center">
+                                                <div class="col-md-4 col-lg-3">
+                                                        <div class="card text-center h-100">
+                                                                <img src="images/6.png"
+                                    class="card-img-top mx-auto mt-3" alt="Lewis Hamilton"                              
+                                          style="max-width: 150px;">
+                                                                <div class="card-body">
+                                    <div class="linha">
+                                <a class="linha" href="lewis.html"> Lewis Hamilton</a>
+                            </div>
+                                    
+                                                                        <p class="card-text text-secondary"> Do Reino  Unido tem 7 títulos, detentor do recorde de maior número de vitórias (mais de 100) e pole positions.</p>
+                                                                    </div>
+                                                            </div>
+                                                    </div>
+                                                <div class="col-md-4 col-lg-3">
+                                                        <div class="card text-center h-100">
+                                                                <img src="images/3.png"
+                                    class="card-img-top mx-auto mt-3" alt="Oscar Piastri"                              
+                                          style="max-width: 150px;">
+                                                                <div class="card-body">
+                                                                        <h5 class="card-title">Oscar Piastri</h5>
+                                                                        <p class="card-text text-secondary">Liderança surpreendente e consistente na temporada, com 8 vitórias.</p>
+                                                                    </div>
+                                                            </div>
+                                                    </div>
+                                                <div class="col-md-4 col-lg-3">
+                                                        <div class="card text-center h-100">
+                                                                <img src="images/4.png"
+                                    class="card-img-top mx-auto mt-3" alt="Lando Norris"                                
+                                        style="max-width: 150px;">
+                                                                <div class="card-body">
+                                                                        <h5 class="card-title">Lando Norris</h5>
+                                                                        <p class="card-text text-secondary">Companheiro de equipe de Piastri, fortecandidato ao título e um dos mais rápidos em ritmo puro.</p>
+                                                                    </div>
+                                                            </div>
+                                                    </div>
+                                                <div class="col-md-4 col-lg-3">
+                                                        <div class="card text-center h-100">
+                                                                <img src="images/5.png"
+                                    class="card-img-top mx-auto mt-3" alt="Max Verstappen"                              
+                                          style="max-width: 150px;">
+                                                                <div class="card-body">
+                                                                        <h5 class="card-title">Max Verstappen</h5>
+                                                                        <p class="card-text text-secondary">Tricampeão mundial, ainda é uma força dominante, mesmo com o carro da McLaren à frente.</p>
+                                                                    </div>
+                                                            </div>
+                                                    </div>
+                                                <div class="col-md-4 col-lg-3">
+                                                        <div class="card text-center h-100">
+                                                                <img src="images/2.png"
+                                    class="card-img-top mx-auto mt-3" alt="George Russel"                              
+                                          style="max-width: 150px;">
+                                                                <div class="card-body">
+                                                                        <h5 class="card-title">George Russel</h5>
+                                                                        <p class="card-text text-secondary">Piloto mais bem colocado da Mercedes, mostrando resiliência e velocidade.</p>
+                                                                    </div>
+                                                            </div>
+                                                    </div>
+                                                <div class="col-md-4 col-lg-3">
+                                                        <div class="card text-center h-100">
+                                                                <img src="images/1.png"
+                                    class="card-img-top mx-auto mt-3" alt="Charles Leclerc"                            
+                                            style="max-width: 150px;">
+                                                                <div class="card-body">
+                                                                        <h5 class="card-title">Charles Leclerc</h5>
+                                                                        <p class="card-text text-secondary">Líder da Ferrari, conhecido por sua velocidade em classificação e talento natural.</p>
+                                                                    </div>
+                                                            </div>
+                                                    </div>
+
+                                            </div>
+                                    </div>
+
+                            </div>
+                    </section>
+
+                <section id="video" class="content-section p-4 text-center">
+                        <h2 class="section-title mb-5">Intro de Bahrain 2025</h2>
+                        <div class="row justify-content-center">
+                                <div class="col-lg-8 col-xl-6 mb-4">
+                                        <div class="ratio ratio-16x9">
+                                                <iframe width="560" height="315"                            
+                            src="https://www.youtube.com/embed/L1nQUHJqnuI?si=9D50yna6MndeiQIp"                        
+                                title="YouTube video player" frameborder="0"                            
                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                    </div>
-                </div>
-                <div class="col-lg-6 mb-4">
-                    <h3 class="text-light">Nosso Escritório (Exemplo)</h3>
-                    <div class="ratio ratio-16x9">
-                        <iframe
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3657.4850702758117!2d-46.63935268554203!3d-23.55018158467479!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce59a6064f7a1f%3A0xf639a04a55d49f6!2sRua%20Bandeirantes%2C%20S%C3%A3o%20Paulo%20-%20SP!5e0!3m2!1spt-BR!2sbr!4v1678280674208!5m2!1spt-BR!2sbr"
-                            allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </div>
+                                                        referrerpolicy="strict-origin-when-cross-origin"
+                            allowfullscreen></iframe>
+                                            </div>
+                                    </div>
+                            </div>
+                    </section>
+            </div>
 
-    <footer id="contato-footer" class="footer text-center py-4 mt-5">
-        <div class="container">
-            <h4 class="text-light mb-3">Contato</h4>
-            <p class="mb-1">Email: <a href="mailto:destiny@beyonce.com" class="text-info text-decoration-none">destiny@beyonce.com</a></p>
-            <p class="mb-1">Telefone: (11) 1234-5678</p>
-            <p class="mb-3">Endereço: Rua Bandeirantes, 123, São Paulo, SP</p>
+        <footer id="contato-footer" class="footer text-center py-4 mt-5">
+                <div class="container">
+                       <h4 class="text-light mb-3">Desenvolvedora</h4>
+                        <p class="mb-1">Nicole Menzzavilla</p>
+                        <p class="mb-2">Número 21</p>
+                        <p class="mb-3">Informática 1 ano E</p>
 
-            <div class="mb-3">
-                <a href="#" class="text-light mx-2"><i class="fab fa-facebook-f fa-lg"></i></a>
-                <a href="#" class="text-light mx-2"><i class="fab fa-twitter fa-lg"></i></a>
-                <a href="#" class="text-light mx-2"><i class="fab fa-instagram fa-lg"></i></a>
-            </div>
-
-            <p class="text-muted mt-3">&copy; 2025 Destiny's Child - Todos os direitos reservados.</p>
-        </div>
-    </footer>
-
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
-        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
-        integrity="sha384-0pUGZvbkm6XF6g5/K3fWfTzB5hA1L08T8V/jCgT0Z6M3r1p7T5K1J4F5J9F0F4E"
-        crossorigin="anonymous"></script>
+                        <div class="mb-3">
+                                <a href="#" class="text-light mx-2"><i class="fab fa-facebook-f fa-lg"></i></a>
+                                <a href="#" class="text-light mx-2"><i class="fab fa-twitter fa-lg"></i></a>
+                                <a href="#" class="text-light mx-2"><i class="fab fa-instagram fa-lg"></i></a>
+                            </div>
+                    </div>
+                <p class="text-white-50 small mt-3">&copy; 2025 F1 Fan Page. Todos os direitos reservados.</p>
+            </footer>
 </body>
 
 </html>
