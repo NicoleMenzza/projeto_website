@@ -4,19 +4,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lewis Hamilton - Lenda da F1</title>
+    <title>Lando Norris - O Talento Britânico da McLaren</title>
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+        xintegrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
-        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLMDJzL2sEHE3O8b6cE5F6WJ30e2mD5/PjA/0H5X+iF5+p3+e8X1E+R5+q7O0E+5A=="
+        xintegrity="sha512-SnH5WK+bZxgPHs44uWIX+LLMDJzL2sEHE3O8b6cE5F6WJ30e2mD5/PjA/0H5X+iF5+p3+e8X1E+R5+q7O0E+5A=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
     <style>
         /* Estilos baseados no seu modelo */
         body {
-            background-image: url('images/ferrari.jpg');
-            /* Mantenha o fundo da F1 */
+            /* Mantendo a imagem original F1fundo */
+            background-image: url('images/mclaren.jpg');
             background-repeat: no-repeat;
             background-size: cover;
             background-attachment: fixed;
@@ -37,14 +38,16 @@
         }
 
         .nav-link:hover {
-            background-color: hsl(0, 99%, 41%);
+            /* Laranja sutil no hover */
+            background-color: hsl(28, 99%, 41%); 
             color: rgb(255, 255, 255) !important;
-            box-shadow: 0 0 10px rgb(151, 0, 0);
+            box-shadow: 0 0 10px rgb(255, 135, 0); 
         }
 
         .section-title {
             color: #ffffff;
-            border-bottom: 2px solid #ce0000;
+            /* Laranja da McLaren para a linha */
+            border-bottom: 2px solid #E06000;
             padding-bottom: 10px;
             margin-bottom: 30px;
         }
@@ -61,7 +64,8 @@
             background-color: #2c2b2b;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
             border: 1px solid #222121;
-            border-left: 5px solid #a10000;
+            /* Laranja da McLaren como borda de destaque */
+            border-left: 5px solid #FF8700; 
             
             padding: 20px;
             margin-bottom: 20px;
@@ -74,7 +78,8 @@
         }
 
         .piloto-card h4 {
-            color: #e60000;
+            /* Laranja da McLaren para o nome */
+            color: #FF8700; 
         }
 
         .stats-grid {
@@ -88,7 +93,8 @@
             background-color: #1e1e1e;
             padding: 15px;
             border-radius: 5px;
-            border: 1px solid #ac0000;
+            /* Laranja da McLaren para a borda da estatística */
+            border: 1px solid #FF8700; 
         }
 
         .stat-item h3 {
@@ -105,7 +111,8 @@
 
         .footer {
             background-color: rgba(48, 48, 48, 0.9);
-            color: #ce0000;
+            /* Cor de destaque do rodapé mantida */
+            color: #ce0000; 
         }
     </style>
 
@@ -135,7 +142,7 @@
                         <a class="nav-link" href="informacoes.html">CURIOSIDADES</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">PILOTOS (Hamilton)</a>
+                        <a class="nav-link active" aria-current="page" href="#">PILOTOS (Norris)</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="index.html#video">VÍDEO</a>
@@ -150,62 +157,65 @@
 
 
     <div class="container mt-5 pt-5">
-        <section id="piloto-hamilton" class="content-section p-4">
-            <h1 class="section-title text-center mb-5 mt-3">LEWIS HAMILTON: O HEPTACAMPEÃO</h1>
+        <section id="piloto-norris" class="content-section p-4">
+            <h1 class="section-title text-center mb-5 mt-3">LANDO NORRIS: O TALENTO BRITÂNICO</h1>
 
             <div class="row justify-content-center">
                 <div class="col-12 col-lg-10">
 
                     <div class="piloto-card mb-4 p-4 text-center">
-                        <img src="images/lewis2.jpg"
-                            alt="Foto de Lewis Hamilton" >
-                        <h4>Sir Lewis Carl Davidson Hamilton</h4>
+                        <!-- Substituir pela imagem do Norris -->
+                        <img src="images/norris.slide.jpg"
+                            alt="Foto de Lando Norris" >
+                        <h4>Lando Norris</h4>
                         <p class="lead text-secondary">
-                            Considerado um dos maiores pilotos de todos os tempos, Lewis Hamilton é
-                            conhecido por seu ativismo, longevidade e por deter o recorde de 7 títulos mundiais de
-                            pilotos, um feito que divide com Michael Schumacher.
+                            Lando Norris é um dos pilotos mais carismáticos e rápidos da Fórmula 1. Conhecido por sua
+                            velocidade pura na classificação e sua longevidade na McLaren, ele é amplamente considerado
+                            o próximo campeão mundial britânico.
                         </p>
                         <hr class="text-secondary">
                         <p class="text-white-50 small">
-                            Nascimento: 7 de Janeiro de 1985 (Stevenage, Inglaterra) | Equipe Atual: Mercedes-AMG PETRONAS F1
-                            Team | Número do Carro: 44
+                            Nascimento: 13 de Novembro de 1999 (Bristol, Inglaterra) | Equipe Atual: McLaren F1 Team
+                            | Número do Carro: 4
                         </p>
                     </div>
 
-                    <h2 class="section-title text-center mt-5 mb-4" style="border-color: #a10000;">Estatísticas Até 2024</h2>
+                    <h2 class="section-title text-center mt-5 mb-4" style="border-color: #FF8700;">Estatísticas da Carreira (Até 2024)</h2>
                     
                     <div class="stats-grid">
                         <div class="stat-item">
-                            <h3>7</h3>
-                            <p>Títulos Mundiais</p>
+                            <h3>120+</h3>
+                            <p>GPs Disputados</p>
                         </div>
                         <div class="stat-item">
-                            <h3>103</h3>
-                            <p>Vitórias em Corridas</p>
+                            <h3>17+</h3>
+                            <p>Pódios na Carreira</p>
                         </div>
                         <div class="stat-item">
-                            <h3>104</h3>
+                            <h3>1</h3>
+                            <p>Vitória na Carreira (Miami 2024)</p>
+                        </div>
+                        <div class="stat-item">
+                            <h3>6</h3>
                             <p>Pole Positions</p>
-                        </div>
-                        <div class="stat-item">
-                            <h3>197</h3>
-                            <p>Pódios</p>
                         </div>
                     </div>
 
                     <div class="piloto-card mt-5">
-                        <h4>Um Novo Capítulo: Ferrari em 2025</h4>
-                        <p class="text-secondary">Após mais de uma década com a Mercedes, Hamilton fez uma
-                            mudança histórica para a Scuderia Ferrari na temporada de 2025. Este movimento era um dos mais
-                            aguardados na história recente da Fórmula 1, prometendo renovar sua busca pelo oitavo título.</p>
+                        <h4>A História do Carisma e da Consistência</h4>
+                        <p class="text-secondary">Desde que se juntou à McLaren em 2019, Lando estabeleceu-se como um
+                            líder de equipe, sendo crucial no desenvolvimento recente do carro. Sua rivalidade amigável e
+                            o ambiente positivo com seu companheiro Oscar Piastri tornaram a dupla uma das mais populares
+                            do grid. A sua primeira vitória, conquistada após anos de pódios, foi um dos momentos mais
+                            emocionantes da sua carreira, marcando um novo capítulo para a equipe de Woking.</p>
                     </div>
 
                 </div>
             </div>
 
             <div class="text-center mt-5">
-                <a href="index.html" class="btn btn-lg btn-outline-danger"><i
-                        class="fas fa-chevron-left"></i> Voltar para a Home</a>
+                <a href="index.html" class="btn btn-lg btn-outline-warning text-white"><i
+                            class="fas fa-chevron-left"></i> Voltar para a Home</a>
             </div>
 
         </section>
@@ -227,6 +237,9 @@
         <p class="text-white-50 small mt-3">&copy; 2025 F1 Fan Page. Todos os direitos reservados.</p>
     </footer>
 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        xintegrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
 
 </body>
 

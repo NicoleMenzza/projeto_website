@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BRASILEIROS NA F1</title>
+    <!-- Carregamento do Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <style>
+        /* Estilização básica para fontes e cores */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0d0d0d; /* Fundo escuro */
+            color: #e5e5e5; /* Texto claro */
+        }
+        /* Mantendo o estilo do badge do campeão */
+        .champion-badge {
+            background-color: #009933; /* Verde da bandeira para contraste */
+            color: #ffffff;
+            font-weight: 700;
+        }
+    </style>
+</head>
+<body class="p-4 sm:p-8">
+
+    <div class="max-w-7xl mx-auto">
+        <!-- Título Principal (Atualizado para foco no Brasil) -->
+        <header class="text-center mb-12">
+            <h1 class="text-5xl sm:text-7xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-green-500 to-yellow-400 mb-2">
+                Lendas Brasileiras
+            </h1>
+            <p class="text-xl sm:text-2xl text-gray-400">Os Tricampeões e Pioneiros da Velocidade</p>
+        </header>
+
+        <!-- Container de Pilotos - Grid Responsivo (1, 2, ou 3 colunas) -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+            <script>
+                // Função para gerar um cartão de piloto
+                function generateDriverCard(name, championships, era, summary, imageUrl, color, badgeText) {
+                    const borderColor = color || 'border-green-500'; 
+                    return `
+                    <div class="rounded-xl overflow-hidden shadow-2xl bg-[#1a1a1a] border border-gray-700 w-full">
+                        <!-- Imagem do Piloto - Ocupa 100% do topo -->
+                        <img src="${imageUrl}" 
+                             alt="Imagem de ${name}" 
+                             class="w-full h-48 object-cover object-top border-b-4 ${borderColor}">
+                        
+                        <div class="p-5">
+                            <h2 class="text-2xl font-bold mb-1 text-white">${name}</h2>
+                            <p class="text-xs text-gray-500 mb-3">${era}</p>
+                            
+                            <!-- Estatísticas Chave -->
+                            <div class="flex flex-wrap gap-2 mb-3">
+                                <span class="champion-badge text-xs px-3 py-1 rounded-full">
+                                    ${badgeText}
+                                </span>
+                            </div>
+
+                            <!-- Resumo da Carreira -->
+                            <p class="text-gray-300 text-sm leading-relaxed">
+                                ${summary}
+                            </p>
+                        </div>
+                    </div>
+                    `;
+                }
+
+                // Dados dos Pilotos Brasileiros (Atualizados com Gabriel Bortoleto)
+                const drivers = [
+                    {
+                        name: "Ayrton Senna",
+                        championships: 3,
+                        era: "1984 - 1994",
+                        summary: "Considerado por muitos o piloto mais rápido de todos os tempos, o 'Rei de Mônaco' era um mestre em condições de chuva e um ícone de garra. Sua rivalidade com Prost é épica.",
+                        imageUrl: "images/11.png",
+                        color: "border-yellow-400",
+                        badgeText: "3x CAMPEÃO MUNDIAL"
+                    },
+                    {
+                        name: "Nelson Piquet",
+                        championships: 3,
+                        era: "1978 - 1991",
+                        summary: "Tricampeão mundial, Piquet era conhecido por sua pilotagem suave e habilidade em acertar o carro para a corrida. Um dos grandes nomes da geração de ouro brasileira da F1.",
+                        imageUrl: "images/12.png",
+                        color: "border-green-500",
+                        badgeText: "3x CAMPEÃO MUNDIAL"
+                    },
+                    {
+                        name: "Gabriel Bortoleto",
+                        championships: 0, // Ainda não é campeão de F1
+                        era: "Nova Geração (F2)",
+                        summary: "Um dos grandes talentos emergentes do Brasil. Vencedor do campeonato de F3 em sua temporada de estreia (2023), ele avança para a F2 buscando uma vaga na Fórmula 1.",
+                        imageUrl: "images/13.png",
+                        color: "border-yellow-500",
+                        badgeText: "CAMPEÃO DA F3 (2023)"
+                    }
+                ];
+
+                const gridContainer = document.querySelector('.grid');
+                if (gridContainer) {
+                    drivers.forEach(driver => {
+                        gridContainer.innerHTML += generateDriverCard(
+                            driver.name,
+                            driver.championships,
+                            driver.era,
+                            driver.summary,
+                            driver.imageUrl,
+                            driver.color,
+                            driver.badgeText
+                        );
+                    });
+                }
+            </script>
+        </div>
+
+    </div>
+
+</body>
+</html>
