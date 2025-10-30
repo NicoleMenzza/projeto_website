@@ -13,45 +13,42 @@
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 
     <style>
-        /* Define a cor de fundo e fonte base */
         body {
             font-family: 'Inter', sans-serif;
             background-color: #000000;
-            /* Preto simples */
+
             color: #F0F0F0;
-            /* Texto claro */
+          
         }
 
-        /* Estilo para a imagem dos pilotos: circular com borda vermelha */
+      
         .card-img-f1 {
             border-radius: 50%;
             border: 4px solid #E10600;
-            /* Vermelho F1 */
+            
         }
 
-        /* Envolve o vídeo e o carrossel para a borda vermelha do tema F1 */
+       
         .video-wrapper,
         .carousel-wrapper-f1 {
             border: 4px solid #E10600;
             border-radius: 10px;
             overflow: hidden;
-            /* Garante que o iframe e imagens fiquem dentro da borda */
+        
         }
 
-        /* Ajuste para o carrossel, mantendo a altura e proporção responsiva */
         .carousel-item img {
             height: 24rem;
-            /* 384px (equivalente a h-96 do Tailwind) */
             object-fit: cover;
         }
 
 
-        /* Para a proporção do vídeo ser responsiva */
+       
         .aspect-video-wrapper {
             position: relative;
             width: 100%;
             padding-bottom: 56.25%;
-            /* 16:9 ratio */
+          
         }
 
         .aspect-video-wrapper iframe {
@@ -70,13 +67,12 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-20">
                 
-                <!-- Logo -->
+               
                 <a class="flex-shrink-0" href="index.html">
                     <img src="images/logo.png" alt="..."
                         class="w-24 h-auto">
                 </a>
 
-                <!-- Desktop Menu (Links) - Usa flex items-center para garantir alinhamento vertical e horizontal -->
                 <div class="hidden md:block">
                     <div class="flex items-center space-x-2 lg:space-x-4">
                         <a href="index.html" class="nav-link-style">HOME</a>
